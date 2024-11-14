@@ -53,6 +53,8 @@ const init = async () => {
 			}
 
 			bookService.create(reqBody);
+
+			console.log(bookService.books);
 			return h
 				.response({
 					status: 'success',

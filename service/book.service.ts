@@ -6,8 +6,9 @@ export class BookService {
 		this.books = book;
 	}
 	create(newBook: IBook) {
-		this.books.push(new Book(newBook));
-		return this.books;
+		const newBookCreated = new Book(newBook);
+		this.books.push(newBookCreated);
+		return newBookCreated.id;
 	}
 	getAll() {
 		return this.books;

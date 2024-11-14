@@ -56,6 +56,7 @@ const init = () => __awaiter(void 0, void 0, void 0, function* () {
                     .code(400);
             }
             bookService.create(reqBody);
+            console.log(bookService.books);
             return h
                 .response({
                 status: 'success',
